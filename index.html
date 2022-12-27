@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Music Player CC-Project</title>
+</head>
+<body>
+	<div class="container">
+		<img class="logo" src="./img/symbol.png" width="10%" height="15%"><h1>Bitsify</h1>
+		<div class="part1">
+			<img id="track_image">
+            <div class="volume">
+               <p id="volume_show">90</p>
+               <i class="fa fa-volume-up" aria-hidden="true" onclick="mute_sound()" id="volume_icon"></i>
+               <input type="range" min="0" max="100" value="90" onchange="volume_change()" id="volume">  
+            </div>
+		</div>
+
+		<div class="part2">
+			<div class="songno">
+				<p id="present">1</p>
+				<p>/</p>
+				<p id="total">6</p>
+			</div>
+			<p id="title">Title.mp3</p>
+			<p id="artist">Artist Name</p>
+			<div class="middle">
+				<button onclick="previous_song()" id="prev"><i class=" fa fa-duotone fa-backward-step"></i></button>
+				<button onclick="justplay()" id="play"><i class=" fa fa-solid fa-play"></i></button>
+				<button onclick="nxt_song()" id="nxt"><i class=" fa fa-solid fa-forward-step"></i></button>
+			</div>
+
+			<div class="duration">
+				<input type="range" min="0" max="100" value="0" id="duration_slider" onchange="change_duration()">
+			</div>
+			<button id="auto" onclick="autoplay_switch()">Auto Play<i class=" fa fa-solid fa-circle-notch"></i></button>
+		</div>
+	</div>
+	<script src="https://kit.fontawesome.com/6af974318a.js" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
